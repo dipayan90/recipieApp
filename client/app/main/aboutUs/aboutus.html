@@ -1,0 +1,12 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<div>
+  <header class="hero-unit" id="banner">
+    <div class="container">
+      <i class="fa fa-cutlery" style="font-size: xx-large"></i>
+      <h1>About Reciepie Wala</h1>
+    </div>
+    <div >
+      <button ng-repeat="category in aboutUsCategories" type="button" class="btn btn-default aboutUsCategories">{{category}}</button>
+    </div>
+  </header>
+</div>

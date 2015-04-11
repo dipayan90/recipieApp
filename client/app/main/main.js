@@ -7,5 +7,10 @@ angular.module('recipieAppApp')
         url: '/',
         templateUrl: 'app/main/main.html',
         controller: 'MainCtrl'
+      })
+      .state('about', {
+        url: '/about',
+        templateUrl: 'app/main/aboutUs/aboutus.html',
+        controller: 'aboutCtrl'
       });
   });
