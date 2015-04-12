@@ -19,7 +19,7 @@
     color: #F5F5F5;
     text-align: center;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-    background: #4393B9;
+    background: #BB4C16;
 }
 
 .footer {
@@ -75,4 +75,94 @@
 .team-member-connect{
   margin-right: 10px;
   font-size: 20px;
+}
+
+
+
+
+.search-moment-container{
+  height: 500px;
+}
+
+
+.search-moment-container figure {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.search-moment-container .search-moment {
+  text-align: center;
+  top: -486px;
+  position: relative;
+  height: 100%;
+}
+
+.search-moment-container h2 {
+  font: normal 5.10225rem "Gotham Cond SSm 5r";
+  text-transform: uppercase;
+  color: #333;
+  padding: 5rem 0 0.875rem 0;
+}
+
+.search-moment-container .search-moment form {
+  margin-bottom: 8.5rem;
+}
+
+.search-moment-container .search-moment fieldset {
+  padding: 0;
+  margin: 0 auto;
+  width: 29.125rem;
+  border: none;
+}
+
+.search-moment-container .search-moment fieldset input {
+  float: left;
+  width: 26.25rem;
+  height: 2.8125rem;
+  border: none;
+  background: rgba(255,255,255,0.75);
+  padding-left: 1.125rem;
+  font: normal 1.13194rem "Gotham SSm 5r";
+  letter-spacing: normal;
+  color: #333;
+}
+
+.search-moment-container .search-moment fieldset button {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  background-color: #333;
+  -webkit-transition: background-color 0.2s ease-out;
+  -moz-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+  border: none;
+  float: left;
+}
+
+.search-moment-container .search-moment fieldset button div {
+  width: 20px;
+  height: 19px;
+  margin: 0 auto;
+}
+
+.search-moment-container .search-moment button.inspired {
+  color: #fff;
+  background-color: #333;
+  width: 16.375rem;
+  height: 4.75rem;
+  border: none;
+  position: relative;
+  white-space: nowrap;
+}
+
+.search-moment-container .search-moment button.inspired div {
+  font: italic 400 1.5rem utopia-std-display;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-family: utopia-std-display;
+  line-height: 4.125rem;
+  border: 1px solid #979797;
 }
