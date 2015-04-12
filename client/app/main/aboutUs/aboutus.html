@@ -6,7 +6,74 @@
       <h1>About Recipe Wala</h1>
     </div>
     <div >
-      <button ng-repeat="category in aboutUsCategories" type="button" class="btn btn-default aboutUsCategories">{{category}}</button>
+      <button ng-repeat="category in aboutUsCategories" type="button" class="btn btn-default aboutUsCategories" ng-click="showCategory(category)">{{category}}</button>
     </div>
   </header>
+
+  <div class="row" ng-show="showIdea">
+    <div class="col-xs-6">
+      <img src="assets/images/about-us-food-image.png" class="about-us-image img-rounded">
+    </div>
+    <div class="col-xs-6">
+      <h2 class="text-left our-story-header">Our Story ...</h2>
+      <div class="our-story-body">
+        <br/>
+        This is a simple app that intends to show how AngularJs, Node, MongoDb and ElasticSearch play
+        together. Here we have a very large JSON file that has lots and lots of recipes stored in them.
+        We will use a type-ahead to search for different recipes. Also people will be able to login and
+        add their own recipes and share their secret with rest of the world.
+        <br/>
+        <br/>
+        This application intends to provide the hidden chefs to come out and show their cutlery skills
+        to the entire world.
+        </br>
+        </br>
+        Let us dive in and relinquish our appetite. As rightly said by <b>Mark Twain</b>:
+        </br>
+        </br>
+      <blockquote>
+        <p class="our-story-quote">Part of the secret of success in life is to eat what you like .....</p>
+      </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <div ng-show="!showIdea">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="assets/images/member1.jpg" class="team-member-image img-rounded">
+        <h3 class="team-member-name">Dipayan Chattopadhyay</h3>
+      </div>
+      <div class="col-md-8">
+       <div class="well team-member-detail">
+         <span>Dipayan is an amateur cook.He has 3 years of cooking experience. He has expertise in cooking indian food.
+           Some of his signature dishes are chicken rezala, vegetable curry, chicken biriyani, paneer tikka etc.
+           </br>
+           </br>
+           He also has 5 years experience in cooking <b>JAVA</b> dishes, 2 years experience serving <b>SPRING</b> dishes as sides.
+           He has 1 years of experience in dressing <b>AngularJs</b> with signature <b>NodeJs</b> sauce. He likes to experiment
+           a lot, and this is a small experiment with <b>Elastic Search</b> and <b>MongoDb</b>.
+           </br>
+           </br>
+           Hope you all like the food. Please feel free to connect with him at:
+           </br>
+           </br>
+           <a href="http://www.linkedin.com/in/dchattopadhyay"> <i class="fa fa-linkedin team-member-connect"></i> </a>
+           <a href="http://github.com/dipayan90"> <i class="fa fa-github team-member-connect"></i> </a>
+           <a href="http://dipayan90.wordpress.com"> <i class="fa fa-wordpress team-member-connect"></i> </a>
+         </span>
+       </div>
+      </div>
+    </div>
+  </div>
+
 </div>
+
+<footer class="footer">
+  <div class="container">
+    <p><i class="fa fa-copyright"></i> kajjoyworks |
+      <a href="https://twitter.com/dipayan90">@dipayan90</a> |
+      <a href='https://github.com/dipayan90/recipieApp/issues'>Issues</a></p>
+  </div>
+</footer>
+

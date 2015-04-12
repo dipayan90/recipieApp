@@ -33,3 +33,46 @@
   margin-right: 15px;
   display: inline;
 }
+
+.about-us-image{
+  width: 400px;
+  height: auto;
+  margin-top: 60px;
+  margin-left: 60px;
+}
+
+.our-story-header{
+  font-family: cursive;
+  margin-top: 60px;
+}
+
+.our-story-body{
+  width: 600px;
+  font-family: monospace;
+}
+
+.our-story-quote{
+  font-family: fantasy;
+}
+
+.team-member-image{
+  width: 150px;
+  height: 200px;
+  margin-top: 60px;
+  margin-left: 60px;
+}
+
+.team-member-detail{
+  width: 700px;
+  margin-top: 60px;
+  margin-right: 60px;
+}
+
+.team-member-name{
+  margin-left: 20px;
+}
+
+.team-member-connect{
+  margin-right: 10px;
+  font-size: 20px;
+}
