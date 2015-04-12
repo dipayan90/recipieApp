@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('recipieAppApp')
-  .controller('MainCtrl', function ($scope, $http, socket) {
+  .controller('MainCtrl', function ($scope, $http, socket,recipeSearchService) {
     $scope.awesomeThings = [];
 
     $http.get('/api/things').success(function(awesomeThings) {
@@ -24,4 +24,14 @@ angular.module('recipieAppApp')
     $scope.$on('$destroy', function () {
       socket.unsyncUpdates('thing');
     });
+
+    $scope.searchQuery = function(searchTerm){
+      recipeSearchService.searchRecipe(searchTerm).then(function(data){
+        console.log(data);
+      },function(error){
+        console.log("getting error from elastic search"+error);
+      });
+    }
+
+
   });

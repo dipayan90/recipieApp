@@ -1,3 +1,4 @@
+<script src="bower_components/elasticsearch/elasticsearch.angular.min.js"></script>
 <div ng-include="'components/navbar/navbar.html'"></div>
 
 <header class="hero-unit" id="banner">
@@ -36,11 +37,11 @@
   </figure>
   <div class="search-moment light">
     <h2>I am hungry for ....</h2>
-    <form name="search-moment-form" action="/tools/searchresults" method="get">
+    <form name="search-moment-form">
       <fieldset>
         <div class="autocomplete-container">
-          <input type="text" name="search" autocomplete="off" />
-          <button type="submit">
+          <input type="text" name="search" autocomplete="off" ng-model="searchText" placeholder="Search Recipe Here"/>
+          <button type="submit" ng-click="searchQuery(searchText)">
             <i class="fa fa-search" style="color: #ffffff"></i>
           </button>
         </div>
