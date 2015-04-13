@@ -166,3 +166,16 @@
   line-height: 4.125rem;
   border: 1px solid #979797;
 }
+
+.panel-group{
+  width: 250px;
+  margin-top: 60px;
+  margin-left: 40px;
+}
+
+.recipeListings{
+  margin-right: 60px;
+  margin-top: 60px;
+  overflow-wrap: break-word;
+  width: auto;
+}
