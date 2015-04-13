@@ -1,0 +1,48 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h2>Here are the recipes for {{recipeKey}}</h2>
+    <i class="fa fa-cutlery" style="font-size: xx-large"></i>
+  </div>
+</header>
+
+<div class="row">
+  <!-- Accordion for filtering -->
+  <div class="col-md-4">
+    <accordion close-others="oneAtATime">
+      <accordion-group ng-click="isActive(0)">
+        <accordion-heading>
+          Serves <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status[0].open, 'glyphicon-chevron-right': !status[0].open}"></i>
+        </accordion-heading>
+        <div ng-repeat="serving in servings">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> {{serving}}
+            </label>
+          </div>
+        </div>
+      </accordion-group>
+      <accordion-group ng-click="isActive(1)">
+        <accordion-heading>
+          filter 1 <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status[1].open, 'glyphicon-chevron-right': !status[1].open}"></i>
+        </accordion-heading>
+        filter 1 placeholder
+      </accordion-group>
+      <accordion-group ng-click="isActive(2)">
+        <accordion-heading>
+         filter 2<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status[2].open, 'glyphicon-chevron-right': !status[2].open}"></i>
+        </accordion-heading>
+        filter 2 placeholder
+      </accordion-group>
+    </accordion>
+  </div>
+  <div class="col-md-8">
+    <div ng-repeat="recipe in recipeList.returnValue" class="recipeListings">
+      <div class="well">
+        {{recipe}}
+      </div>
+    </div>
+  </div>
+</div>
+
+

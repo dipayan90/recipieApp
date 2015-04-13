@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('recipieAppApp')
-  .controller('MainCtrl', function ($scope, $http, socket,recipeSearchService) {
+  .controller('MainCtrl', function ($rootScope,$scope, $http, socket,recipeSearchService,$state,repositoryService) {
     $scope.awesomeThings = [];
 
     $http.get('/api/things').success(function(awesomeThings) {
@@ -26,11 +26,27 @@ angular.module('recipieAppApp')
     });
 
     $scope.searchQuery = function(searchTerm){
+      var resultObject;
+      repositoryService.setCurrentSearchterm(searchTerm);
+
       recipeSearchService.searchRecipe(searchTerm).then(function(data){
-        console.log(data);
+        resultObject ={
+          term: searchTerm,
+          returnValue: data.data.hits.hits
+        };
+        repositoryService.setCurrentRecipeResponse(resultObject);
+        $state.go('searchResults');
+
       },function(error){
         console.log("getting error from elastic search"+error);
+        resultObject ={
+          term: searchTerm,
+          returnValue: ''
+        };
+        repositoryService.setCurrentRecipeResponse('');
+        $state.go('searchResults');
       });
+
     }
 
 

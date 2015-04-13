@@ -12,5 +12,10 @@ angular.module('recipieAppApp')
         url: '/about',
         templateUrl: 'app/main/aboutUs/aboutus.html',
         controller: 'aboutCtrl'
+      })
+      .state('searchResults', {
+        url: '/searchResults',
+        templateUrl: 'app/main/recipieResults/recipieResults.html',
+        controller: 'resultsCtrl'
       });
   });
