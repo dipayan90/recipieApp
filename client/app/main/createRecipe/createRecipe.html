@@ -1,0 +1,68 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<div>
+  <header class="hero-unit" id="banner">
+    <div class="container">
+      <i class="fa fa-cutlery" style="font-size: xx-large"></i>
+      <h2>Create your own recipe</h2>
+    </div>
+  </header>
+</div>
+<div class="row"><div class="col-md-2"></div>
+<div class="col-md-8" style="margin-top: 100px">
+  <form>
+    <div class="form-group">
+      <label>Recipe Name</label>
+      <div class="preview-container" ng-show="recipeName">
+        <b class="indent-preview-text">Preview:</b></br>
+        <span class="indent-preview-text">{{recipeName}}</span>
+      </div>
+      <input type="text" class="form-control" placeholder="Enter recipe name" ng-model="recipeName" required>
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <div class="preview-container" ng-show="description">
+        <b class="indent-preview-text">Preview:</b></br>
+        <span class="indent-preview-text">{{description}}</span>
+      </div>
+      <textarea class="form-control" rows="3" placeholder="Add description here" ng-model="description"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Ingredients</label>
+      <ol>
+        <li ng-repeat="item in ingredients">{{item}}</li>
+      </ol>
+      <input type="text" class="form-control" placeholder="Enter ingredient here" ng-model="ingredient" ng-click = "clearTextBox()" style="width: 400px;">
+      <button type="submit" class="btn btn-default add-item-button" ng-click="addIngredient(ingredient)">Add</button>
+    </div>
+    <div class="form-group">
+      <label>Process</label>
+      <div class="preview-container" ng-show="process">
+        <b class="indent-preview-text">Preview:</b></br>
+        <span class="indent-preview-text">{{process}}</span>
+      </div>
+      <textarea class="form-control" rows="5" placeholder="Add the step by step process here" ng-model="process"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Serves</label>
+      <select class="form-control" ng-model="serves" style="width: 60px;">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Website</label>
+      <input type="text" class="form-control" placeholder="Enter website address if any" ng-model="url">
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox"> I agree to make my recipe public and accessible to all.
+      </label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div><div class="col-md-2"></div>
+</div>
+

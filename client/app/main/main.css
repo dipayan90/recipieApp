@@ -179,3 +179,21 @@
   overflow-wrap: break-word;
   width: auto;
 }
+
+.preview-container{
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  background: whitesmoke;
+  border-color: darkgrey;
+  margin-bottom: 13px;
+}
+
+.indent-preview-text{
+  margin-left: 5px;
+}
+
+.add-item-button{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

@@ -16,6 +16,8 @@ angular.module('recipieAppApp')
     $scope.isAdmin = Auth.isAdmin;
     $scope.getCurrentUser = Auth.getCurrentUser;
 
+    console.log($scope.isLoggedIn());
+
     $scope.logout = function() {
       Auth.logout();
       $location.path('/login');
