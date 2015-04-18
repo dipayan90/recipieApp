@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('recipieAppApp')
-  .controller('NavbarCtrl', function ($scope, $location, Auth) {
+  .controller('NavbarCtrl', function ($scope, $location, Auth,repositoryService) {
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
@@ -16,7 +16,7 @@ angular.module('recipieAppApp')
     $scope.isAdmin = Auth.isAdmin;
     $scope.getCurrentUser = Auth.getCurrentUser;
 
-    console.log($scope.isLoggedIn());
+    repositoryService.setCurrentUserId(Auth.getCurrentUser()._id);
 
     $scope.logout = function() {
       Auth.logout();

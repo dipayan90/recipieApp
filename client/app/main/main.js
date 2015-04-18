@@ -18,6 +18,11 @@ angular.module('recipieAppApp')
         templateUrl: 'app/main/createRecipe/createRecipe.html',
         controller: 'createRecipeCtrl'
       })
+      .state('feedback', {
+        url: '/feedback',
+        templateUrl: 'app/main/feedback/feedback.html',
+        controller: 'feedbackCtrl'
+      })
       .state('searchResults', {
         url: '/searchResults',
         templateUrl: 'app/main/recipieResults/recipieResults.html',

@@ -8,6 +8,7 @@ angular.module('recipieAppApp')
   .service('repositoryService', function ($rootScope) {
     var currentSearchTerm;
     var currentSearchResponse;
+    var currentUserId;
     return {
       setCurrentSearchterm : function(term){
         currentSearchTerm = term;
@@ -20,6 +21,12 @@ angular.module('recipieAppApp')
       },
       getCurrentRecipeResponse : function(){
         return currentSearchResponse;
+      },
+      setCurrentUserId: function(id){
+        currentUserId = id;
+      },
+      getCurrentUserId: function () {
+        return currentUserId;
       }
     };
   });

@@ -197,3 +197,14 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.recipe-form input.ng-invalid.ng-touched {
+  border: solid 1px indianred;
+}
+
+.feedbackContainer{
+  border: 1px solid #808080;
+  background: #f5f5f5;
+  margin-top: 60px;
+  border-radius: 4px;
+}
