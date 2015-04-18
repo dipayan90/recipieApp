@@ -30,6 +30,26 @@ Note: Download the file from: http://openrecip.es/ and extract it.
 
 After you extract the JSON add the JSON to server/components/uploads/.
 
+#Functionalities
+
+1. This app has a working elastic search interface.
+
+2. Fully responsive design.
+
+3. This app has a functionality to create social as well as local accounts. 
+
+4. You can create and store your recipes in mongo.
+
+5. You can search your own recipe as well as lookup some one else's. 
+
+#Roadmap
+
+1. Facebook Integration. Recipes created can be shared to facebook platform. 
+
+2. Much better searching capability with faceted search options. 
+
+3. A food R & D section that can provide analytics about food culture across the world.
+
 
 
 
