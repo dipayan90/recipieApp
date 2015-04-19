@@ -23,6 +23,11 @@ angular.module('recipieAppApp')
         templateUrl: 'app/main/feedback/feedback.html',
         controller: 'feedbackCtrl'
       })
+      .state('authorResults', {
+        url: '/authorResults',
+        templateUrl: 'app/main/authorResults/authorResults.html',
+        controller: 'authorResultsCtrl'
+      })
       .state('searchResults', {
         url: '/searchResults',
         templateUrl: 'app/main/recipieResults/recipieResults.html',

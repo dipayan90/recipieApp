@@ -1,0 +1,26 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<div>
+  <header class="hero-unit" id="banner">
+    <div class="container">
+      <i class="fa fa-cutlery" style="font-size: xx-large"></i>
+      <h2>Your recipes are here</h2>
+    </div>
+  </header>
+</div>
+<div ng-init="init()">
+  <div class="col-md-4"></div>
+<div class="col-md-8">
+  <div ng-repeat="recipe in recipeList" class="recipeListings">
+    <div class="well">
+      <div class="page-header">
+        <h2>
+          {{recipe.name}}
+        </h2>
+      </div>
+      {{recipe.description}}
+      <a href="{{recipe.url}}">More</a>
+    </div>
+  </div>
+</div>
+</div>
+

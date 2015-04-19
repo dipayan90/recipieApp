@@ -16,9 +16,11 @@ var validationError = function(res, err) {
  * restriction: 'admin'
  */
 exports.index = function(req, res) {
-  User.find({}, '-salt -hashedPassword', function (err, users) {
+  Recipe.find({'authorId':req.body.userId}, '', function (err, recipes) {
     if(err) return res.send(500, err);
-    res.json(200, users);
+    console.log(err);
+    console.log(recipes);
+    res.json(200, recipes);
   });
 };
 
